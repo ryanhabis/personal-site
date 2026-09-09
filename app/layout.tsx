@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ryan Habis | Personal Site",
-  description: "A modular personal website for portfolio, blog, and video content.",
+  title: "Ryan Habis | Drone Company Portfolio",
+  description: "A drone company portfolio showcasing projects, video content, and work samples from Ryan Habis.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -7,26 +7,28 @@ export default function HomePage() {
     <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 py-12">
       <section className="rounded-3xl bg-gradient-to-br from-violet-600 via-indigo-600 to-blue-600 px-8 py-14 text-white shadow-xl">
         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-violet-100">
-          Personal website
+          Drone company portfolio
         </p>
         <h1 className="mt-4 max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl">
-          A continuously expandable portfolio, blog, and media hub.
+          Real drone work, organized clearly and ready to be explored.
         </h1>
         <p className="mt-5 max-w-2xl text-lg text-violet-50">
-          Built with Next.js, this starter gives you a clean homepage plus modular sections for projects, writing, and video content that you can extend over time.
+          This site showcases my drone company work as a portfolio piece, with curated projects, video content, and a clean overview of the kind of aerial work I can deliver.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
-          <Link
-            href="/portfolio"
+          <a
+            href="https://www.youtube.com/channel/UCFODtxH31XxzkY4QY--KTSw"
+            target="_blank"
+            rel="noreferrer"
             className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-violet-700 transition hover:bg-violet-50"
           >
-            Explore portfolio
-          </Link>
+            Watch YouTube channel
+          </a>
           <Link
-            href="/blog"
+            href="/portfolio"
             className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
           >
-            Read blog
+            Explore portfolio
           </Link>
         </div>
       </section>
@@ -60,9 +62,9 @@ export default function HomePage() {
           <SectionCard
             title="YouTube"
             href="/youtube"
-            description="Highlight videos, tutorials, and media that complements your work."
+            description="Showcase drone demos, aerial footage, and project work from your YouTube channel in a structured way."
             eyebrow="Media"
-            details={["Video cards", "Embedded pages", "Delivery-ready structure"]}
+            details={["Curated videos", "Project highlights", "Easy channel access"]}
           />
           <SectionCard
             title="CV"
@@ -84,7 +86,7 @@ export default function HomePage() {
       <section className="grid gap-8 lg:grid-cols-3">
         <div className="lg:col-span-2">
           <div className="mb-6 flex items-center justify-between">
-            <h2 className="text-2xl font-bold tracking-tight text-zinc-900">Featured projects</h2>
+            <h2 className="text-2xl font-bold tracking-tight text-zinc-900">Featured drone projects</h2>
             <Link href="/portfolio" className="text-sm font-semibold text-violet-600 hover:text-violet-700">
               View all
             </Link>
@@ -129,7 +131,7 @@ export default function HomePage() {
           </div>
 
           <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-            <h3 className="text-xl font-semibold text-zinc-900">Latest videos</h3>
+            <h3 className="text-xl font-semibold text-zinc-900">Latest drone content</h3>
             <div className="mt-5 space-y-4">
               {videos.map((video) => (
                 <Link key={video.id} href={`/youtube/${video.id}`} className="block rounded-xl bg-zinc-50 p-4 transition hover:bg-zinc-100">

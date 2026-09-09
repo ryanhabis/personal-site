@@ -10,13 +10,13 @@ export default function AboutPage() {
         </h1>
         <div className="mt-6 space-y-5 text-base leading-8 text-zinc-700">
           <p>
-            I’m a software engineer with a computer science background, and I enjoy creating digital experiences that are practical, maintainable, and easy to expand.
+            I’m Ryan Habis, and this site is designed as a portfolio piece for my drone company work. It brings together project highlights, YouTube content, and a structured overview of the kind of aerial services and media I can provide.
           </p>
           <p>
-            This site is intentionally designed as a modular platform. It starts with a strong foundation for portfolio work, blog content, and media, and it can grow with new sections over time as your interests and projects evolve.
+            The goal is to keep the work organized and easy to explore, so visitors can quickly understand the range of projects, drone capabilities, and visual content that support the business.
           </p>
           <p>
-            I care about clean architecture, strong UX, and systems that make it easy to keep publishing without fighting the tooling.
+            I care about clean presentation, practical storytelling, and making technical work feel approachable, professional, and easy to navigate.
           </p>
         </div>
       </div>

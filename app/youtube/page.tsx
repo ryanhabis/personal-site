@@ -4,11 +4,25 @@ import { videos } from "@/lib/content";
 export default function YoutubePage() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-12">
-      <div className="mb-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-violet-600">
-          YouTube
-        </p>
-        <h1 className="mt-2 text-4xl font-bold tracking-tight text-zinc-900">Latest videos</h1>
+      <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-violet-600">
+            YouTube
+          </p>
+          <h1 className="mt-2 text-4xl font-bold tracking-tight text-zinc-900">Drone work and media</h1>
+        </div>
+        <a
+          href="https://www.youtube.com/channel/UCFODtxH31XxzkY4QY--KTSw"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex rounded-full bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700"
+        >
+          View channel
+        </a>
+      </div>
+
+      <div className="mb-8 rounded-2xl border border-violet-200 bg-violet-50 p-5 text-sm text-violet-700">
+        This page is organized as a clean media archive for drone demos, site surveys, inspection footage, and project highlights from the channel.
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
