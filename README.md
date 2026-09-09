@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Site
+
+A modular personal website built with Next.js, TypeScript, and Tailwind CSS. The site is structured around reusable sections for portfolio work, writing, videos, CV, and profile content, making it easy to expand over time.
+
+## Features
+
+- Homepage with featured projects, latest blog posts, and latest videos
+- Dedicated sections for:
+  - Portfolio
+  - Blog
+  - YouTube
+  - CV
+  - About
+- Content-driven architecture via `lib/content.ts`
+- Clean, responsive UI using modern Next.js app-router pages
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- ESLint
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev
+npm run build
+npm run start
+npm run lint
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```text
+app/
+  about/
+  blog/
+  cv/
+  portfolio/
+  youtube/
+  globals.css
+  layout.tsx
+  page.tsx
+components/
+  SectionCard.tsx
+  SiteHeader.tsx
+lib/
+  content.ts
+public/
+  cv/
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content Editing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Most of the site content is centralized in `lib/content.ts`, including:
 
-## Deploy on Vercel
+- portfolio projects
+- blog posts
+- video entries
+- data helpers like `getProjectBySlug`, `getBlogPostBySlug`, and `getVideoById`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Update the exported arrays in that file to change the content shown across the site.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Customizing Pages
+
+- Homepage content: `app/page.tsx`
+- About page: `app/about/page.tsx`
+- Blog page: `app/blog/page.tsx`
+- Portfolio pages: `app/portfolio/`
+- YouTube pages: `app/youtube/`
+- CV page: `app/cv/page.tsx`
+
+## Deployment
+
+This project is ready to deploy on platforms like Vercel. After building the app, you can publish it with your preferred hosting provider.
+
+## Notes
+
+The current repository is a content-first personal site starter that you can extend with your own projects, articles, media, and resume details as your portfolio grows.

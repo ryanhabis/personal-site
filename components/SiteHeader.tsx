@@ -13,7 +13,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="text-lg font-semibold tracking-tight text-zinc-900">
-          Alex Carter
+          Ryan Habis
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (

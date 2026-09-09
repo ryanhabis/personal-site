@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Carter | Personal Site",
+  title: "Ryan Habis | Personal Site",
   description: "A modular personal website for portfolio, blog, and video content.",
 };
 
