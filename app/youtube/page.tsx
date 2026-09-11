@@ -34,7 +34,9 @@ export default function YoutubePage() {
                 {video.publishedAt}
               </p>
               <h2 className="mt-2 text-2xl font-semibold text-zinc-900">{video.title}</h2>
-              <p className="mt-3 text-sm leading-6 text-zinc-600">{video.description}</p>
+              <p className="mt-3 whitespace-pre-line text-sm leading-6 text-zinc-600">
+                {video.description}
+              </p>
               <div className="mt-4 flex items-center justify-between">
                 <span className="text-sm font-medium text-zinc-500">{video.duration}</span>
                 <Link href={`/youtube/${video.id}`} className="text-sm font-semibold text-violet-600 hover:text-violet-700">

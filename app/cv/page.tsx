@@ -35,10 +35,12 @@ const projects = [
     ],
   },
   {
-    title: "AI Autonomous Tank Bot (RoboCode Ireland)",
+    title: "Autonomous Tank Bot (RoboCode Ireland)",
     award: "1st Place National Winner (2023)",
     bullets: [
-      "Engineered a custom predictive targeting and movement algorithm in Java, achieving a 95% win rate against national university teams.",
+      "Developed an autonomous tank bot in Java for Robocode, a programming game where bots compete head-to-head in a simulated arena.",
+      "Implemented predictive targeting, movement optimisation, and battle strategy logic to improve survival, engagement, and overall performance against rival bots.",
+      "Iteratively refined the bot through local battle simulations and competitive tuning, resulting in a 95% win rate against university teams nationally.",
     ],
   },
   {
@@ -94,9 +96,30 @@ const education = [
     detail: "Expected 2026",
   },
   {
+    title: "Bachelor of Science in Computing",
+    institution: "Dundalk Institute of Technology",
+    detail: "2021 – 2024 — completed the undergraduate computing degree pathway that led into the Cloud Computing honours programme.",
+    pdfLinks: [
+      {
+        label: "Year 1 modules and grades",
+        href: "/cv/Bachelor%20of%20Science%20in%20Computing%202021-2022.pdf",
+      },
+      {
+        label: "Year 2 modules and grades",
+        href: "/cv/Bachelor%20of%20Science%20in%20Computing%202022-2023.pdf",
+      },
+      {
+        label: "Year 3 modules and grades",
+        href: "/cv/Bachelor%20of%20Science%20in%20Computing%202023-2024.pdf",
+      },
+    ],
+  },
+  {
     title: "BSc (Hons) in Cloud Computing",
     institution: "Dundalk Institute of Technology",
     detail: "2020 – 2025 — Grade: 1st Class Honours Equivalent / Best Thesis Award",
+    pdfHref: "/cv/Bachelor%20of%20Science%20(Honours)%20in%20Computing%20in%20Cloud%20Computing%202024-2025.pdf",
+    pdfLabel: "Download degree PDF",
   },
 ];
 
@@ -133,7 +156,7 @@ export default function CvPage() {
         <section className="mt-10">
           <h2 className="text-2xl font-bold text-zinc-900">Professional Summary</h2>
           <p className="mt-4 text-base leading-8 text-zinc-700">
-            MSc Data Analytics student and award-winning BSc Cloud Computing graduate (1st Place National RoboCode 2023, Best Thesis Award 2025). Hands-on experience architecting serverless Azure IoT pipelines and AWS cloud environments. Proven track record leading technical initiatives, teaching 680+ students via N-TUTORR national funding, and building production-ready web and data applications. Combines an electrician’s system-troubleshooting mindset with expertise in Python, SQL, REST APIs, and Cloud Infrastructure.
+            MSc Data Analytics student and award-winning graduate with a Bachelor of Science in Computing and a BSc (Hons) in Cloud Computing (1st Place National RoboCode 2023, Best Thesis Award 2025). Hands-on experience architecting serverless Azure IoT pipelines and AWS cloud environments. Proven track record leading technical initiatives, teaching 680+ students via N-TUTORR national funding, and building production-ready web and data applications. Combines an electrician’s system-troubleshooting mindset with expertise in Python, SQL, REST APIs, and Cloud Infrastructure.
           </p>
         </section>
 
@@ -226,6 +249,28 @@ export default function CvPage() {
                 <h3 className="text-lg font-semibold text-zinc-900">{item.title}</h3>
                 <p className="mt-1 text-sm text-zinc-600">{item.institution}</p>
                 <p className="mt-2 text-sm text-zinc-700">{item.detail}</p>
+                {item.pdfLinks ? (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {item.pdfLinks.map((pdf) => (
+                      <a
+                        key={pdf.href}
+                        href={pdf.href}
+                        download
+                        className="inline-flex rounded-full border border-violet-300 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-violet-700 transition hover:bg-violet-50"
+                      >
+                        {pdf.label}
+                      </a>
+                    ))}
+                  </div>
+                ) : item.pdfHref ? (
+                  <a
+                    href={item.pdfHref}
+                    download
+                    className="mt-4 inline-flex rounded-full border border-violet-300 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-violet-700 transition hover:bg-violet-50"
+                  >
+                    {item.pdfLabel || "Download PDF"}
+                  </a>
+                ) : null}
               </div>
             ))}
           </div>

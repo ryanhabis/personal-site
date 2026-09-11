@@ -8,6 +8,7 @@ export type Project = {
     demo?: string;
     github?: string;
   };
+  embedUrl?: string;
   metrics: string[];
 };
 
@@ -27,9 +28,35 @@ export type Video = {
   duration: string;
   publishedAt: string;
   thumbnail: string;
+  embedUrl?: string;
 };
 
 export const projects: Project[] = [
+  {
+    slug: "droneireland-website",
+    title: "DroneIreland Website",
+    summary: "A professional, trust-building website for an Irish drone services business focused on photography, video, inspections, and lead generation.",
+    description:
+      "DroneIreland is a clean, conversion-focused website built to help a licensed Irish drone operator clearly explain their services, pricing, and credibility. The site highlights photography, video, inspections, and nationwide coverage while reinforcing trust through IAA licensing, insurance, GDPR compliance, and a strong local service message. It is structured to guide visitors from curiosity to enquiry with clear package pages, service explanations, FAQs, and a straightforward contact path.",
+    technologies: ["Service Positioning", "Lead Generation", "Trust Signals", "Pricing Pages", "Conversion-Focused UX"],
+    links: {
+      demo: "https://www.droneireland.ie/",
+    },
+    metrics: ["Clear service positioning", "Stronger credibility for buyers", "Simple path from interest to enquiry"],
+  },
+  {
+    slug: "bistro-brand-promotion",
+    title: "Bistro Coffee Shop Promotion",
+    summary: "A collaborative promotional campaign for a local bistro combining drone photography, social-first video, and team-led content production.",
+    description:
+      "This project involved promoting a coffee and food shop through a multi-format content campaign that blended aerial visuals with on-the-ground video production. I worked alongside a team of videographers to create content that showcased the atmosphere, quality, and personality of the business in a way that felt authentic and highly shareable. The result was a polished social media story designed to attract attention, build local awareness, and present the brand in a stronger, more engaging light.",
+    technologies: ["Drone Photography", "Video Production", "Social Media Content", "Brand Promotion", "Team Collaboration"],
+    links: {
+      demo: "https://www.instagram.com/reel/DY9m0oRM4ZQ/?stkn=MzRlODBiNWFlZA==",
+    },
+    embedUrl: "https://www.instagram.com/reel/DY9m0oRM4ZQ/embed",
+    metrics: ["Strong local brand visibility", "Social-first content creation", "Collaborative production workflow"],
+  },
   {
     slug: "commercial-drone-surveying",
     title: "Commercial Drone Surveying",
@@ -97,12 +124,24 @@ export const blogPosts: BlogPost[] = [
 
 export const videos: Video[] = [
   {
-    id: "demo-1",
-    title: "Drone Survey and Mapping Demo",
-    description: "A look at how aerial survey work can be organized into a clear, professional portfolio piece with usable visual output.",
-    duration: "12:08",
-    publishedAt: "2026-08-15",
-    thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    id: "blackrock-4k-drone-flight",
+    title: "Drone flight over Blackrock in 4K",
+    description:
+      "IAA certified pilot.\n\n📍 Location: Blackrock County Louth\n🎵 Music: 2AM - Ben Elson\n✈️ Drone: DJI Mini 4K\n\n🔗 Affiliate links\n\n- DJI: https://click.dji.com/AB4OPzBNbrgwIaRsYOBu-g?pm=link\n\nSocial links:\n📸 Instagram: @drone.ireland\n🌐 Website: https://www.droneireland.ie/\n🎵 TikTok: @tiktok.com/@ryanhabis\n👍 Facebook: Drone Ireland\n\n🛡️ IAA 1a & 3a certified | Public liability insured\n\nBoring but important stuff:\nI am a fully IAA-certified drone pilot (1a & 3a) and maintain full public liability insurance. All flights comply with Irish Aviation Authority regulations.\n\nDisclaimer: Some links in this description are affiliate links, meaning I may earn a small commission if you make a purchase, at no extra cost to you. Thanks for supporting the channel!",
+    duration: "0:30",
+    publishedAt: "2026-09-11",
+    thumbnail: "https://img.youtube.com/vi/MRisT1OiDaY/maxresdefault.jpg",
+    embedUrl: "https://www.youtube.com/embed/MRisT1OiDaY?si=9rt5EttWesvoaItO",
+  },
+  {
+    id: "cross-cooley-challenge-4k",
+    title: "Drone flight of Cross Cooley Challenge from start to finish 15km in 4K",
+    description:
+      "May 24, 2026\n\nDrone flight of Cross Cooley Challenge from start to finish 15km in 4K – see Ireland's landscape from an aerial view\n\n Charities: 100% of the funds raised go directly to cancer care and support via North Louth Hospice and respite care for children with disabilities via the Maria Goretti Foundation.\n\nIAA certified pilot.\n\n📍 Location: Starting at Lumpers bar ending up in Carlingford\n🎵 Music: Plastic Flowers (Instrumental Version) Sully Bright\n✈️ Drone: DJI Mini 4K\n\n🔗 Affiliate links\n\n- DJI: https://click.dji.com/AB4OPzBNbrgwIaRsYOBu-g?pm=link\n\nSocial links:\n📸 Instagram: @drone.ireland\n🌐 Website: https://www.droneireland.ie/\n🎵 TikTok: @tiktok.com/@ryanhabis\n👍 Facebook: Drone Ireland\n\n🛡️ IAA 1a & 3a certified | Public liability insured\n\nBoring but important stuff:\nI am a fully IAA-certified drone pilot (1a & 3a) and maintain full public liability insurance. All flights comply with Irish Aviation Authority regulations.",
+    duration: "0:30",
+    publishedAt: "2026-05-24",
+    thumbnail: "https://img.youtube.com/vi/A9k4NBnXtQ4/maxresdefault.jpg",
+    embedUrl: "https://www.youtube.com/embed/A9k4NBnXtQ4?si=1vZWZr2PtewXH5f3",
   },
   {
     id: "demo-2",

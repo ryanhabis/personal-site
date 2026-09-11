@@ -66,6 +66,18 @@ export default async function ProjectDetailPage({
             </ul>
           </div>
         </div>
+
+        {project.embedUrl ? (
+          <div className="mt-10 overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 p-2">
+            <iframe
+              src={project.embedUrl}
+              title={project.title}
+              className="aspect-[9/16] w-full rounded-xl"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        ) : null}
       </article>
     </main>
   );
