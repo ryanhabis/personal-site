@@ -5,34 +5,6 @@ import { blogPosts, projects, videos } from "@/lib/content";
 export default function HomePage() {
   return (
     <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 py-12">
-      <section className="rounded-3xl bg-gradient-to-br from-violet-600 via-indigo-600 to-blue-600 px-8 py-14 text-white shadow-xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-violet-100">
-            Drone company portfolio
-          </p>
-          <h1 className="mt-4 max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl">
-            Real drone work, organized clearly and ready to be explored.
-          </h1>
-          <p className="mt-5 max-w-2xl text-lg text-violet-50">
-            This site showcases my drone company work as a portfolio piece, with curated projects, video content, and a clean overview of the kind of aerial work I can deliver.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="https://www.youtube.com/channel/UCFODtxH31XxzkY4QY--KTSw"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-violet-700 transition hover:bg-violet-50"
-            >
-              Watch YouTube channel
-            </a>
-            <Link
-              href="/portfolio"
-              className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
-            >
-              Explore portfolio
-            </Link>
-          </div>
-      </section>
-
       <section>
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
