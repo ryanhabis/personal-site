@@ -93,6 +93,18 @@ export const projects: Project[] = [
     },
     metrics: ["Better visual storytelling", "Stronger online presence", "More polished client-facing content"],
   },
+  {
+    slug: "cv-reviewer",
+    title: "CV Reviewer",
+    summary: "An AI-powered resume feedback tool that helps students and job seekers improve structure, clarity, and keyword alignment.",
+    description:
+      "CV Reviewer is a FastAPI-based web application that lets users paste CV text or upload a PDF resume, then receive structured AI feedback on strengths, weaknesses, and keyword optimization. The project combines a clean frontend experience with a backend that extracts PDF text and sends the content to Google Gemini for tailored suggestions on how to improve a resume for student and early-career applications.",
+    technologies: ["FastAPI", "Python", "Google GenAI", "pypdf", "PDF Upload", "AI Feedback"],
+    links: {
+      demo: "https://cv-reviewer-fetv.onrender.com/",
+    },
+    metrics: ["AI-generated resume guidance", "PDF resume upload support", "Actionable feedback in a clear, readable format"],
+  },
 ];
 
 export const blogPosts: BlogPost[] = [
