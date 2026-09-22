@@ -102,6 +102,7 @@ export const projects: Project[] = [
     technologies: ["FastAPI", "Python", "Google GenAI", "pypdf", "PDF Upload", "AI Feedback"],
     links: {
       demo: "https://cv-reviewer-fetv.onrender.com/",
+      github: "https://github.com/ryanhabis/cv-reviewer",
     },
     metrics: ["AI-generated resume guidance", "PDF resume upload support", "Actionable feedback in a clear, readable format"],
   },
