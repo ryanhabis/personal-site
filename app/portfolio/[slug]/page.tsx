@@ -18,6 +18,12 @@ export default async function ProjectDetailPage({
     notFound();
   }
 
+  const galleryItems = project.gallery?.length
+    ? project.gallery
+    : project.embedUrl
+      ? [{ title: project.title, embedUrl: project.embedUrl }]
+      : [];
+
   return (
     <main className="mx-auto max-w-4xl px-6 py-12">
       <Link href="/portfolio" className="text-sm font-semibold text-violet-600 hover:text-violet-700">
@@ -67,15 +73,19 @@ export default async function ProjectDetailPage({
           </div>
         </div>
 
-        {project.embedUrl ? (
-          <div className="mt-10 overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 p-2">
-            <iframe
-              src={project.embedUrl}
-              title={project.title}
-              className="aspect-[9/16] w-full rounded-xl"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-              allowFullScreen
-            />
+        {galleryItems.length ? (
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {galleryItems.map((item) => (
+              <div key={item.embedUrl} className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 p-2">
+                <iframe
+                  src={item.embedUrl}
+                  title={item.title}
+                  className="aspect-[9/16] w-full rounded-xl"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; webgpu"
+                  allowFullScreen
+                />
+              </div>
+            ))}
           </div>
         ) : null}
       </article>

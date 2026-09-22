@@ -9,6 +9,10 @@ export type Project = {
     github?: string;
   };
   embedUrl?: string;
+  gallery?: {
+    title: string;
+    embedUrl: string;
+  }[];
   metrics: string[];
 };
 
@@ -67,19 +71,29 @@ export const projects: Project[] = [
     links: {
       demo: "https://www.youtube.com/channel/UCFODtxH31XxzkY4QY--KTSw",
     },
+    gallery: [
+      {
+        title: "Costa 3D model",
+        embedUrl: "https://poly.cam/capture/30dd3a39-d705-445c-8017-c54d44de884c/embed",
+      },
+      {
+        title: "Church building",
+        embedUrl: "https://poly.cam/capture/47448b18-ce3f-4c15-b2a4-1faacb28ed49",
+      },
+      {
+        title: "House inspection",
+        embedUrl: "https://poly.cam/capture/d6428f67-8863-42de-8679-9123364243b1",
+      },
+      {
+        title: "Community center Blackrock",
+        embedUrl: "https://poly.cam/capture/3a86c852-4c8c-483f-be29-10133e372c48",
+      },
+      {
+        title: "GAA field",
+        embedUrl: "https://poly.cam/capture/cf24a6e1-5c80-4efa-9e10-7c1cebbe31d7",
+      },
+    ],
     metrics: ["Faster site coverage", "Clearer visual reporting", "Improved client communication"],
-  },
-  {
-    slug: "drone-inspection-workflow",
-    title: "Drone Inspection Workflow",
-    summary: "Inspection-focused drone operations designed to capture issues quickly and communicate findings clearly.",
-    description:
-      "This project shows how drone operations can support inspection work across industrial, property, and infrastructure environments. The emphasis is on speed, safety, and producing a reliable visual record that can be shared with stakeholders.",
-    technologies: ["Aerial Inspection", "Data Capture", "Safety Planning", "Reporting", "Video Production"],
-    links: {
-      demo: "https://www.youtube.com/channel/UCFODtxH31XxzkY4QY--KTSw",
-    },
-    metrics: ["Reduced site travel time", "Faster issue identification", "More consistent deliverables"],
   },
   {
     slug: "media-and-marketing-drone-content",
@@ -89,22 +103,38 @@ export const projects: Project[] = [
       "This work focuses on creating polished drone footage and branded media that help communicate the value of drone services in a more engaging and memorable way. It blends technical execution with creative presentation for a stronger portfolio impact.",
     technologies: ["Cinematic Aerial Video", "Brand Storytelling", "Editing", "Content Strategy", "Social Media"],
     links: {
-      demo: "https://www.youtube.com/channel/UCFODtxH31XxzkY4QY--KTSw",
+      demo: "https://www.youtube.com/watch?v=MRisT1OiDaY",
     },
+    embedUrl: "https://www.youtube.com/embed/MRisT1OiDaY?si=9rt5EttWesvoaItO",
     metrics: ["Better visual storytelling", "Stronger online presence", "More polished client-facing content"],
   },
   {
-    slug: "cv-reviewer",
-    title: "CV Reviewer",
-    summary: "An AI-powered resume feedback tool that helps students and job seekers improve structure, clarity, and keyword alignment.",
+  "slug": "cv-reviewer",
+  "title": "CV Reviewer",
+  "summary": "This project is a strong portfolio example of an AI-powered web application, but I have kept the source code private while the app is still using working credentials and local user data. For portfolio purposes, I prefer to showcase the live product and technical outcomes rather than expose the full implementation before it has been cleaned up for public release.",
+  "description": "CV Reviewer is a full-stack FastAPI application that allows users to paste CV text or upload a PDF resume and receive structured AI feedback on clarity, formatting, and role alignment. The project combines a clean frontend experience with backend PDF extraction and Gemini-powered suggestions to help students and early-career candidates strengthen their CVs for internships and entry-level jobs. It also includes a simple authentication flow, usage tracking, and a Stripe-ready subscription prototype for a SaaS-style product experience.",
+  "technologies": ["FastAPI", "Python", "SQLite", "Google Gemini", "pypdf", "PDF Upload", "AI Feedback", "Stripe"],
+  "links": {
+    "demo": "https://cv-reviewer-fetv.onrender.com/",
+  },
+  "metrics": [
+    "AI-generated CV guidance",
+    "PDF resume upload support",
+    "Actionable keyword and role-alignment feedback",
+    "Authentication and usage tracking prototype"
+  ]
+ },
+  {
+    slug: "hospital-database",
+    title: "Hospital Database",
+    summary: "A capstone project building a normalized PostgreSQL hospital database with data cleaning, analytics views, and concurrency testing.",
     description:
-      "CV Reviewer is a FastAPI-based web application that lets users paste CV text or upload a PDF resume, then receive structured AI feedback on strengths, weaknesses, and keyword optimization. The project combines a clean frontend experience with a backend that extracts PDF text and sends the content to Google Gemini for tailored suggestions on how to improve a resume for student and early-career applications.",
-    technologies: ["FastAPI", "Python", "Google GenAI", "pypdf", "PDF Upload", "AI Feedback"],
+      "This project contains a normalized PostgreSQL hospital data model and supporting analytics utilities for cleaning simulated clinical exports, creating reporting views, and validating concurrent transaction safety. It includes schema design, data normalization logic, and a stress test to check for lock ordering issues and deadlocks in multi-user access scenarios.",
+    technologies: ["PostgreSQL", "SQL", "Python", "ETL", "Schema Design", "Concurrency Testing"],
     links: {
-      demo: "https://cv-reviewer-fetv.onrender.com/",
-      github: "https://github.com/ryanhabis/cv-reviewer",
+      github: "https://github.com/ryanhabis/Hospital_Database",
     },
-    metrics: ["AI-generated resume guidance", "PDF resume upload support", "Actionable feedback in a clear, readable format"],
+    metrics: ["Normalized relational design", "Data cleaning for operational exports", "Deadlock-safe concurrency validation"],
   },
 ];
 
