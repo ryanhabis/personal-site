@@ -105,7 +105,20 @@ export const projects: Project[] = [
     links: {
       demo: "https://www.youtube.com/watch?v=MRisT1OiDaY",
     },
-    embedUrl: "https://www.youtube.com/embed/MRisT1OiDaY?si=9rt5EttWesvoaItO",
+    gallery: [
+      {
+        title: "Blackrock aerial promo",
+        embedUrl: "https://www.youtube.com/embed/MRisT1OiDaY?si=9rt5EttWesvoaItO",
+      },
+      {
+        title: "Cross Cooley Challenge",
+        embedUrl: "https://www.youtube.com/embed/A9k4NBnXtQ4?si=1vZWZr2PtewXH5f3",
+      },
+      {
+        title: "Additional drone reel",
+        embedUrl: "https://www.youtube.com/embed/I5AmaXq_RHo",
+      },
+    ],
     metrics: ["Better visual storytelling", "Stronger online presence", "More polished client-facing content"],
   },
   {
@@ -135,6 +148,19 @@ export const projects: Project[] = [
       github: "https://github.com/ryanhabis/Hospital_Database",
     },
     metrics: ["Normalized relational design", "Data cleaning for operational exports", "Deadlock-safe concurrency validation"],
+  },
+  {
+    slug: "3d-printer-to-azure",
+    title: "3D Printer to Azure",
+    summary: "A practical OctoPrint-to-Azure integration that streams live printer telemetry to the cloud and optionally stores G-code in Azure Blob Storage.",
+    description:
+      "This project connects a 3D printer to Azure using OctoPrint, MQTT, and Python so that printer status and temperature data can be sent to Azure IoT Hub for remote monitoring. It also includes an optional file-storage workflow for uploading G-code files to Azure Blob Storage, making the print workflow easier to monitor, troubleshoot, and extend with cloud automation. The setup is focused on real-world operational visibility rather than just demo functionality, which makes it especially useful for makers who want their printing workflow to feel more connected and manageable from the cloud.",
+    technologies: ["OctoPrint", "Azure IoT Hub", "MQTT", "Python", "Azure Blob Storage", "Telemetry", "Remote Monitoring"],
+    links: {
+      demo: "https://github.com/ryanhabis/3D-printer-to-azure/blob/main/GUIDE.md",
+      github: "https://github.com/ryanhabis/3D-printer-to-azure",
+    },
+    metrics: ["Live printer telemetry streaming", "Cloud-based remote monitoring", "Optional G-code storage in Azure", "Simple IoT integration workflow"],
   },
 ];
 
