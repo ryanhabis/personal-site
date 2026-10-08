@@ -124,7 +124,7 @@ export const projects: Project[] = [
   {
   "slug": "cv-reviewer",
   "title": "CV Reviewer",
-  "summary": "This project is a strong portfolio example of an AI-powered web application, but I have kept the source code private while the app is still using working credentials and local user data. For portfolio purposes, I prefer to showcase the live product and technical outcomes rather than expose the full implementation before it has been cleaned up for public release.",
+  "summary": "A full-stack AI-powered web application that turns a CV and target role into structured, actionable feedback. The live product is available to explore; source code is not public.",
   "description": "CV Reviewer is a full-stack FastAPI application that allows users to paste CV text or upload a PDF resume and receive structured AI feedback on clarity, formatting, and role alignment. The project combines a clean frontend experience with backend PDF extraction and Gemini-powered suggestions to help students and early-career candidates strengthen their CVs for internships and entry-level jobs. It also includes a simple authentication flow, usage tracking, and a Stripe-ready subscription prototype for a SaaS-style product experience.",
   "technologies": ["FastAPI", "Python", "SQLite", "Google Gemini", "pypdf", "PDF Upload", "AI Feedback", "Stripe"],
   "links": {
