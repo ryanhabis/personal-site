@@ -34,3 +34,84 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.hero-grid::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.055) 1px, transparent 1px);
+  background-size: 42px 42px;
+  content: "";
+  mask-image: linear-gradient(to bottom, black, transparent 95%);
+}
+
+.hero-glow {
+  background:
+    radial-gradient(ellipse at 82% 8%, rgba(34, 211, 238, 0.2), transparent 32%),
+    radial-gradient(ellipse at 65% 100%, rgba(79, 70, 229, 0.14), transparent 42%);
+}
+
+.code-window {
+  backdrop-filter: blur(14px);
+}
+
+.project-artwork {
+  position: relative;
+  display: flex;
+  min-height: 190px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.project-artwork::after {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 100% 24px;
+  content: "";
+  mask-image: linear-gradient(to bottom, transparent, black);
+  pointer-events: none;
+}
+
+.cv-artwork {
+  background:
+    radial-gradient(ellipse at 80% 15%, rgba(196, 181, 253, 0.75), transparent 38%),
+    linear-gradient(135deg, #e0e7ff, #c7d2fe 54%, #a5b4fc);
+}
+
+.database-artwork {
+  background:
+    radial-gradient(ellipse at 22% 20%, rgba(34, 211, 238, 0.2), transparent 36%),
+    linear-gradient(135deg, #0f172a, #172554 58%, #164e63);
+}
+
+.telemetry-artwork {
+  display: block;
+  padding-top: 2.25rem;
+  background:
+    radial-gradient(ellipse at 70% 0%, rgba(45, 212, 191, 0.18), transparent 38%),
+    linear-gradient(135deg, #082f49, #0f172a 60%, #164e63);
+}
+
+.creative-artwork {
+  display: block;
+  padding-top: 2rem;
+  background:
+    radial-gradient(ellipse at 85% 15%, rgba(251, 191, 36, 0.28), transparent 35%),
+    linear-gradient(135deg, #1e293b, #334155 55%, #155e75);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

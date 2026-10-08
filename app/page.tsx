@@ -27,15 +27,17 @@ const focusAreas = [
 export default function HomePage() {
   return (
     <main>
-      <section className="relative overflow-hidden bg-slate-950 text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(34,211,238,0.16),_transparent_45%)]" />
+      <section className="hero-grid relative overflow-hidden bg-slate-950 text-white">
+        <div className="hero-glow absolute inset-0" />
         <div className="relative mx-auto grid max-w-6xl gap-12 px-6 py-20 sm:py-28 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
-            <p className="font-mono text-sm font-medium tracking-wide text-cyan-300">
+            <p className="inline-flex items-center gap-2 rounded-full border border-cyan-200/20 bg-cyan-200/10 px-3 py-1.5 font-mono text-xs font-medium tracking-wide text-cyan-200">
+              <span className="size-1.5 rounded-full bg-emerald-300 shadow-[0_0_12px_rgba(110,231,183,0.9)]" />
               COMPUTING GRADUATE · DUNDALK, IRELAND
             </p>
-            <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
-              I build practical software and enjoy figuring out how things work.
+            <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight sm:text-6xl">
+              I build practical software
+              <span className="text-cyan-300"> and enjoy figuring out how things work.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
               I’m Ryan, an early-career computing professional exploring software,
@@ -65,7 +67,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl shadow-cyan-950/20">
+          <div className="code-window rounded-2xl border border-white/10 bg-slate-900/85 p-6 shadow-2xl shadow-cyan-950/40">
             <div className="flex items-center gap-2 border-b border-white/10 pb-4">
               <span className="size-2.5 rounded-full bg-rose-400" />
               <span className="size-2.5 rounded-full bg-amber-300" />
@@ -140,7 +142,7 @@ export default function HomePage() {
             {featuredProjects.map((project, index) => (
               <article
                 key={project.slug}
-                className="flex flex-col rounded-2xl border border-slate-200 bg-slate-50 p-6 transition hover:-translate-y-1 hover:border-cyan-300 hover:shadow-lg hover:shadow-slate-200/70"
+                className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1.5 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-950/10"
               >
                 <p className="font-mono text-xs font-semibold tracking-wide text-cyan-800">
                   PROJECT 0{index + 1}
