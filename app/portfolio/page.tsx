@@ -18,23 +18,68 @@ function ProjectArtwork({ slug }: { slug: string }) {
   if (slug === "cv-reviewer") {
     return (
       <div aria-hidden="true" className="project-artwork cv-artwork">
-        <div className="mx-auto max-w-xs rounded-xl border border-white/70 bg-white/90 p-4 shadow-xl shadow-indigo-950/15">
-          <div className="flex items-center justify-between">
-            <span className="font-mono text-[10px] font-bold tracking-widest text-indigo-700">CV REVIEW</span>
-            <span className="rounded-full bg-emerald-100 px-2 py-1 text-[9px] font-semibold text-emerald-800">COMPLETE</span>
-          </div>
-          <div className="mt-4 flex gap-3">
-            <div className="w-1/3 space-y-2 rounded-lg bg-indigo-50 p-2">
-              <div className="h-2 w-3/4 rounded bg-indigo-200" />
-              <div className="h-2 rounded bg-indigo-100" />
-              <div className="h-2 w-4/5 rounded bg-indigo-100" />
-              <div className="h-2 w-2/3 rounded bg-indigo-100" />
+        <div className="mx-auto w-full max-w-[420px] overflow-hidden rounded-[22px] border border-slate-200 bg-white shadow-[0_18px_32px_rgba(15,23,42,0.08)]">
+          <div className="flex items-center justify-between border-b border-slate-200 bg-slate-50 px-4 py-3">
+            <div className="flex items-center gap-2">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-violet-600 text-[9px] font-bold text-white">
+                ✦
+              </span>
+              <span className="font-mono text-[10px] font-semibold tracking-[0.18em] text-violet-700 uppercase">
+                CV Review
+              </span>
             </div>
-            <div className="flex-1 space-y-2 py-1">
-              <div className="h-2 w-2/3 rounded bg-slate-200" />
-              <div className="h-2 rounded bg-slate-100" />
-              <div className="h-2 w-5/6 rounded bg-slate-100" />
-              <div className="mt-3 h-7 rounded-md border border-emerald-100 bg-emerald-50" />
+            <span className="rounded-full border border-emerald-200 bg-emerald-50 px-2 py-1 text-[8px] font-semibold tracking-[0.12em] text-emerald-700 uppercase">
+              Ready
+            </span>
+          </div>
+
+          <div className="bg-white p-4">
+            <div className="rounded-xl bg-slate-50 p-3">
+              <div className="mb-2 flex items-center justify-between text-[9px] font-semibold uppercase tracking-[0.12em] text-slate-500">
+                <span>Top issue</span>
+                <span className="text-violet-700">Score 82</span>
+              </div>
+              <div className="space-y-2">
+                <div className="h-2 w-full rounded bg-slate-200" />
+                <div className="h-2 w-4/5 rounded bg-slate-200" />
+                <div className="h-2 w-3/5 rounded bg-slate-200" />
+              </div>
+            </div>
+
+            <div className="mt-4 grid gap-3 sm:grid-cols-[1fr_1fr]">
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
+                <div className="mb-3 h-2 w-16 rounded bg-slate-200" />
+                <div className="space-y-2">
+                  <div className="h-2 w-full rounded bg-slate-200" />
+                  <div className="h-2 w-5/6 rounded bg-slate-200" />
+                  <div className="h-2 w-4/5 rounded bg-slate-200" />
+                </div>
+              </div>
+
+              <div className="rounded-xl border border-violet-200 bg-violet-50 p-3">
+                <div className="mb-3 h-2 w-20 rounded bg-violet-200" />
+                <div className="space-y-2">
+                  <div className="h-2 w-full rounded bg-violet-100" />
+                  <div className="h-2 w-5/6 rounded bg-violet-100" />
+                  <div className="h-2 w-4/5 rounded bg-violet-100" />
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-4 rounded-xl border border-slate-200 bg-white p-2.5">
+              <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.12em] text-slate-500">
+                Keywords
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {['Azure', 'Python', 'SQL', 'AWS', 'CI/CD'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-[8px] font-medium text-slate-600"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>

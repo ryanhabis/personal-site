@@ -124,17 +124,17 @@ export const projects: Project[] = [
   {
   "slug": "cv-reviewer",
   "title": "CV Reviewer",
-  "summary": "A full-stack AI-powered web application that turns a CV and target role into structured, actionable feedback. The live product is available to explore; source code is not public.",
-  "description": "CV Reviewer is a full-stack FastAPI application that allows users to paste CV text or upload a PDF resume and receive structured AI feedback on clarity, formatting, and role alignment. The project combines a clean frontend experience with backend PDF extraction and Gemini-powered suggestions to help students and early-career candidates strengthen their CVs for internships and entry-level jobs. It also includes a simple authentication flow, usage tracking, and a Stripe-ready subscription prototype for a SaaS-style product experience.",
+  "summary": "A recruiter-style AI CV review dashboard that surfaces the biggest issues first, then turns them into specific changes for education, experience, and skills positioning.",
+  "description": "CV Reviewer is a full-stack AI application that turns a CV and target role into structured, recruiter-grade feedback. It compares the candidate profile against a role lens, highlights the strongest areas and the most damaging red flags, and recommends practical edits for clarity, positioning, and keyword alignment. The interface was designed around a fast, scannable output pattern: key weaknesses first, then actionable improvements, then keyword suggestions users can actually apply.",
   "technologies": ["FastAPI", "Python", "SQLite", "Google Gemini", "pypdf", "PDF Upload", "AI Feedback", "Stripe"],
   "links": {
     "demo": "https://cv-reviewer-fetv.onrender.com/",
   },
   "metrics": [
-    "AI-generated CV guidance",
+    "Recruiter-style CV critique in under a minute",
     "PDF resume upload support",
-    "Actionable keyword and role-alignment feedback",
-    "Authentication and usage tracking prototype"
+    "Actionable improvement suggestions grounded in role fit",
+    "Clearer technical keyword and experience positioning"
   ]
  },
   {
