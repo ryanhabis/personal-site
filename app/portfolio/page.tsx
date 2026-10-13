@@ -136,6 +136,34 @@ function ProjectArtwork({ slug }: { slug: string }) {
     );
   }
 
+  if (slug === "credit-card-fraud-detection") {
+    return (
+      <div aria-hidden="true" className="project-artwork fraud-artwork">
+        <div className="w-full max-w-sm rounded-xl border border-white/15 bg-slate-950/65 p-4 shadow-lg">
+          <div className="flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.18em] text-cyan-100/75">
+            <span>Transaction analysis</span>
+            <span className="rounded-full bg-rose-400/15 px-2 py-1 text-rose-200">0.17% fraud</span>
+          </div>
+          <div className="mt-4 flex items-end gap-1.5" role="presentation">
+            {[32, 48, 38, 67, 52, 84, 60, 74, 45, 92, 63, 78, 56, 70, 43, 88, 58, 75].map(
+              (height, index) => (
+                <span
+                  key={index}
+                  className={`w-full rounded-t-sm ${index === 9 ? "bg-rose-400" : "bg-cyan-300/75"}`}
+                  style={{ height: `${height}px` }}
+                />
+              ),
+            )}
+          </div>
+          <div className="mt-3 flex justify-between font-mono text-[9px] text-cyan-100/60">
+            <span>284,807 transactions</span>
+            <span>EDA / statistics / ML</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div aria-hidden="true" className="project-artwork creative-artwork">
       <span className="font-mono text-xs font-semibold tracking-[0.28em] text-white/75">

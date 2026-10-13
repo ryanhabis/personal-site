@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProjectBySlug, projects } from "@/lib/content";
 
@@ -240,6 +241,11 @@ export default async function ProjectDetailPage({
               Source code
             </a>
           ) : null}
+          {project.report ? (
+            <a href={project.report} target="_blank" rel="noreferrer" className="rounded-full border border-violet-200 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-700 hover:bg-violet-100">
+              View full report (PDF)
+            </a>
+          ) : null}
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -256,6 +262,29 @@ export default async function ProjectDetailPage({
             </ul>
           </div>
         </div>
+
+        {project.charts?.length ? (
+          <section className="mt-10">
+            <h2 className="text-2xl font-semibold text-zinc-900">Exploratory analysis</h2>
+            <p className="mt-2 text-sm leading-6 text-zinc-600">
+              Selected charts from the notebook, covering transaction distributions, PCA features, and fraud correlations.
+            </p>
+            <div className="mt-5 grid gap-5 md:grid-cols-2">
+              {project.charts.map((chart) => (
+                <figure key={chart.src} className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3">
+                  <Image
+                    src={chart.src}
+                    alt={chart.alt}
+                    width={chart.width}
+                    height={chart.height}
+                    className="h-auto w-full rounded-lg"
+                  />
+                  <figcaption className="mt-3 text-sm leading-6 text-zinc-600">{chart.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         {galleryItems.length ? (
           <div className="mt-10 grid gap-6 md:grid-cols-2">

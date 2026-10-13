@@ -13,6 +13,14 @@ export type Project = {
     title: string;
     embedUrl: string;
   }[];
+  report?: string;
+  charts?: {
+    src: string;
+    alt: string;
+    caption: string;
+    width: number;
+    height: number;
+  }[];
   metrics: string[];
 };
 
@@ -137,6 +145,67 @@ export const projects: Project[] = [
     "Clearer technical keyword and experience positioning"
   ]
  },
+  {
+    slug: "credit-card-fraud-detection",
+    title: "Credit Card Fraud Detection",
+    summary: "An exploratory fraud-analysis project using descriptive statistics, visualizations, statistical tests, and a logistic-regression baseline.",
+    description:
+      "Following the CRISP-DM framework, this project explores 284,807 anonymized credit-card transactions recorded over two days, including 473 fraud cases (0.17%). The analysis checks data quality, compares transaction amounts and timing, visualizes PCA-transformed features, and tests differences between transaction groups. It concludes with a logistic-regression baseline using five PCA components. Because fraud is highly imbalanced, the reported 98.0% accuracy is presented alongside the 84.3% fraud detection rate rather than as a standalone measure.",
+    technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "SciPy", "Statsmodels", "scikit-learn", "Jupyter"],
+    links: {
+      github: "https://github.com/ryanhabis/Credit-Card-Fraud-Detection",
+    },
+    report: "/projects/credit-card-fraud/credit-card-fraud-analysis-report.pdf",
+    charts: [
+      {
+        src: "/projects/credit-card-fraud/amount-boxplot.png",
+        alt: "Box plots comparing transaction amounts for normal and fraudulent transactions, with outliers visible.",
+        caption: "Transaction amounts are strongly skewed; outliers were retained because they may contain useful fraud signals.",
+        width: 850,
+        height: 528,
+      },
+      {
+        src: "/projects/credit-card-fraud/distributions.png",
+        alt: "Histograms comparing normal and fraudulent transaction amounts and transaction counts by hour of day.",
+        caption: "Amount and hourly distributions show different patterns between normal and fraudulent transactions.",
+        width: 1162,
+        height: 768,
+      },
+      {
+        src: "/projects/credit-card-fraud/amount-statistics.png",
+        alt: "Bar chart comparing mean and median transaction amounts for normal and fraudulent transactions.",
+        caption: "Fraudulent transactions have a higher mean amount (€123.87 vs €88.41), but a lower median (€9.82 vs €22.00).",
+        width: 790,
+        height: 490,
+      },
+      {
+        src: "/projects/credit-card-fraud/pca-components.png",
+        alt: "Scatter plots of PCA components V1 through V28, with normal transactions in blue and fraud in red.",
+        caption: "PCA component scatter plots help explore how fraudulent transactions differ from normal ones.",
+        width: 1390,
+        height: 768,
+      },
+      {
+        src: "/projects/credit-card-fraud/top-fraud-predictors.png",
+        alt: "Scatter plots showing transaction amount against PCA components V17, V14, V12, V10, V16, and V3.",
+        caption: "V17, V14, V12, V10, and V16 were selected as inputs for the logistic-regression baseline.",
+        width: 1116,
+        height: 768,
+      },
+      {
+        src: "/projects/credit-card-fraud/multivariate-heatmap.png",
+        alt: "Correlation heatmap for top PCA components, transaction amount, and the fraud class.",
+        caption: "V17, V14, and V12 have the strongest negative correlations with the fraud class among the features shown.",
+        width: 1373,
+        height: 592,
+      },
+    ],
+    metrics: [
+      "284,807 transactions examined; 473 fraud cases (0.17%)",
+      "Welch t-test: fraud mean €123.87 vs normal mean €88.41 (p = 0.0032)",
+      "Logistic-regression baseline: 98.0% accuracy and 84.3% fraud detection rate",
+    ],
+  },
   {
     slug: "hospital-database",
     title: "Hospital Database",
